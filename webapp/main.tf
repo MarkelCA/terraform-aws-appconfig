@@ -4,7 +4,7 @@ provider "aws" {
 
 locals {
   region = "us-east-1"
-  name   = "appconfig-ex-${replace(basename(path.cwd), "_", "-")}"
+  name   = "Webapp"
 
   tags = {
     Name       = local.name
@@ -20,7 +20,7 @@ locals {
 module "deactivated_appconfig" {
   source = "../appconfig-module"
 
-  name   = "Myy deactivated!"
+  name   = "Deactivated app"
   create = false
 }
 
