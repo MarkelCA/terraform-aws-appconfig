@@ -4,6 +4,12 @@ variable "create" {
   default     = true
 }
 
+variable "index" {
+  description = "Index of the appconfig project"
+  type        = number
+  default     = 1
+}
+
 variable "tags" {
   description = "A list of tag blocks. Each element should have keys named key, value, and propagate_at_launch"
   type        = map(string)

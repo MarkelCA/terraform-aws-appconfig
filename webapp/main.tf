@@ -17,6 +17,13 @@ locals {
 # AppConfig
 ################################################################################
 
+module "deactivated_appconfig" {
+  source = "../appconfig-module"
+
+  name   = "Myy deactivated!"
+  create = false
+}
+
 module "appconfig" {
   source = "../appconfig-module/"
 

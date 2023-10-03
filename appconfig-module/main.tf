@@ -221,6 +221,7 @@ resource "aws_iam_role" "retrieval" {
 }
 
 resource "aws_appconfig_configuration_profile" "feature_flag_app" {
+  count = var.create ? 1 : 0
   name           = var.feature_flags_app_name
   application_id = aws_appconfig_application.this[0].id
   location_uri   = "hosted" # Replace with your SSM document ARN or another supported location
