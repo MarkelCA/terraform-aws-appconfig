@@ -256,3 +256,15 @@ variable "deployment_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "feature_flags_app_name" {
+  description = "The Feature flags app name"
+  type        = string
+  default     = "Feature Flags"
+}
+
+variable "feature_flags_app_description" {
+  description = "Description for the feature flags application"
+  type        = string
+  default     = null
+}
